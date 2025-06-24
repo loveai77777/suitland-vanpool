@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suitland Vanpool Sign‑Up Form</title>
+  <style>
+    /* =====  基本排版：采用政府网站常用的 Public Sans  ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap');
+
+    body {
+      font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      color: #222;
+      padding: 40px;
+      font-size: 20px;           /* 适中字号，增强可读性 */
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 2.4rem;         /* 政府网站常用标题比例 */
+      text-align: center;
+      margin-bottom: 36px;
+      font-weight: 600;
+    }
+    /* =====  表单容器  ===== */
+    form {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 28px 36px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    input, select, textarea {
+      font-size: 1rem;
+      padding: 10px 12px;
+      width: 100%;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    /*  控制不同宽度  */
+    input.short, select.short {max-width: 240px;}
+    input.narrow, select.narrow {max-width: 170px;}
+    input.medium {max-width: 300px;}
+
+    /* =====  提交按钮  ===== */
+    .submit-container {text-align: center;margin-top: 36px;}
+    button {
+      padding: 18px 56px;
+      font-size: 1.25rem;
+      background-color: #5f3dc4;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {background-color: #4b2cb0;}
+
+    /* =====  图标统一尺寸  ===== */
+    .icon {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Suitland Vanpool Sign‑Up Form</h1>
+  <form>
+    <label for="fullname"><img src="https://img.icons8.com/ios-filled/50/user.png" class="icon"/> Full Name *</label>
+    <input type="text" id="fullname" name="fullname" class="narrow" required>
+
+    <label for="phone"><img src="https://img.icons8.com/ios-filled/50/phone.png" class="icon"/> Phone Number *</label>
+    <input type="tel" id="phone" name="phone" class="narrow" required>
+
+    <label for="email"><img src="https://img.icons8.com/ios-filled/50/new-post.png" class="icon"/> Email Address *</label>
+    <input type="email" id="email" name="email" class="medium" required>
+
+    <label for="whatsapp"><img src="https://img.icons8.com/color/48/whatsapp--v1.png" class="icon"/> WhatsApp</label>
+    <input type="text" id="whatsapp" name="whatsapp" class="narrow">
+
+    <label for="gender"><img src="https://img.icons8.com/ios-filled/50/gender-neutral-user.png" class="icon"/> Gender</label>
+    <select id="gender" name="gender" class="narrow">
+      <option value="">-- Select --</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="pickup"><img src="https://img.icons8.com/ios-filled/50/marker.png" class="icon"/> Pick‑Up Location *</label>
+    <select id="pickup" name="pickup" class="short" required>
+      <option value="">-- Please select --</option>
+      <option value="Clarksburg">Clarksburg</option>
+      <option value="Urbana">Urbana</option>
+      <option value="Frederick">Frederick</option>
+      <option value="Gaithersburg">Gaithersburg</option>
+      <option value="Rockville">Rockville</option>
+      <option value="Olney">Olney</option>
+      <option value="Silver Spring">Silver Spring</option>
+    </select>
+
+    <label for="pickuptime"><img src="https://img.icons8.com/ios-filled/50/clock.png" class="icon"/> Preferred Pick‑Up Time *</label>
+    <select id="pickuptime" name="pickuptime" class="short" required>
+      <option value="">-- Please select --</option>
+      <option value="6:00 AM">6:00 AM</option>
+      <option value="6:30 AM">6:30 AM</option>
+      <option value="7:00 AM">7:00 AM</option>
+    </select>
+
+    <label for="startdate"><img src="https://img.icons8.com/ios-filled/50/calendar.png" class="icon"/> Preferred Start Date *</label>
+    <input type="date" id="startdate" name="startdate" class="short" required>
+
+    <label for="company"><img src="https://img.icons8.com/ios-filled/50/company.png" class="icon"/> Company Name *</label>
+    <input type="text" id="company" name="company" class="medium" required>
+
+    <label for="smartbenefits"><img src="https://img.icons8.com/ios-filled/50/bank.png" class="icon"/> Are You Using SmartBenefits? *</label>
+    <select id="smartbenefits" name="smartbenefits" class="short" required>
+      <option value="">-- Please select --</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <label for="notes"><img src="https://img.icons8.com/ios-filled/50/note.png" class="icon"/> Additional Notes</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Optional..."></textarea>
+
+    <div class="submit-container">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suitland Vanpool</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: "Public Sans", sans-serif;
+      background-color: #f5f7fa;
+      color: #222;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      background: url('/mnt/data/pexels-photo-3635300.jpeg') center/cover no-repeat fixed;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, .45);
+    }
+    .hero-content{
+      position:relative;
+      max-width:720px;
+      padding:0 20px;
+      z-index:1;
+    }
+    .hero h1{font-size:2.5rem;font-weight:600;margin-bottom:.6em}
+    .hero p{font-size:1.15rem;margin-bottom:1.5em}
+    .hero-buttons button{
+      padding:14px 28px;margin:0 10px;font-size:1rem;font-weight:600;border:none;border-radius:6px;cursor:pointer;transition:.2s;
+    }
+    .btn-primary{background:#3f51b5;color:#fff;}
+    .btn-primary:hover{background:#32429b}
+    .btn-outline{background:transparent;color:#fff;border:2px solid #fff;}
+    .btn-outline:hover{background:#fff;color:#3f51b5}
+
+    /* ---------- Nav ---------- */
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 80px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 2px 6px rgba(0,0,0,.05);
+    }
+    nav .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: #000;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    nav .logo img{height:20px;margin-right:8px;filter:brightness(0) saturate(100%) invert(39%) sepia(78%) saturate(601%) hue-rotate(180deg) brightness(102%) contrast(97%)}
+    nav .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 48px;
+      margin-left: 60px;
+    }
+    nav .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 8px 0;
+      transition: color .2s;
+      white-space: nowrap;
+    }
+    nav .nav-links a:hover {
+      color: #3f51b5;
+    }
+
+    section{scroll-margin-top:80px}
+
+    /* Why Join */
+    .why-join{display:flex;justify-content:space-around;flex-wrap:wrap;padding:40px 10px;background:#fff;text-align:center}
+    .why-join h2{width:100%;margin-bottom:30px;font-size:1.6rem;font-weight:600}
+    .feature{max-width:220px;margin:8px}
+    .icon{font-size:26px;margin-bottom:12px}
+
+    /* How It Works */
+    .how-it-works{background:#eef1f5;padding:40px 10px;text-align:center}
+    .how-it-works h2{margin-bottom:30px;font-size:1.6rem;font-weight:600}
+    .steps{display:flex;justify-content:space-around;flex-wrap:wrap}
+    .step{max-width:180px;margin:10px}
+    .step-number{font-size:20px;font-weight:600;background:#3f51b5;color:#fff;border-radius:50%;width:38px;height:38px;line-height:38px;margin:0 auto 8px;font-size:1rem}
+
+    /* Clients */
+    .clients{background:#fff;padding:40px 20px;text-align:center}
+    .clients h2{margin-bottom:20px}
+    .client-logos{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:30px}
+    .client-logos img{max-height:50px;width:auto;filter:grayscale(100%);opacity:.8;transition:.2s}
+    .client-logos img:hover{filter:none;opacity:1}
+
+    /* Testimonials */
+    .testimonials{background:#fefefe;padding:40px 20px;text-align:center}
+    .testimonial{max-width:600px;margin:0 auto 20px;font-style:italic}
+    .testimonial-author{font-weight:600;margin-top:8px}
+
+    /* Footer */
+    footer{background:#3f51b5;color:#fff;padding:30px 20px;text-align:center;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Suitland Vanpool Logo" style="height:48px;vertical-align:middle;">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="about.html">About Us</a>
+      <a href="join.html">Sign Up</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Suitland Vanpool | Government-Backed Commuter Services</h1>
+      <p>✅ Safe. Affordable. Government-Supported.</p>
+      <div class="hero-buttons">
+        <a href="join.html"><button class="btn-primary">Join Now</button></a>
+        <button class="btn-outline">Check Location</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-join" id="features">
+    <h2>Why Join Suitland Vanpool?</h2>
+    <div class="feature">
+      <div class="icon">🚌</div>
+      <p>Reliable Daily Commuting</p>
+    </div>
+    <div class="feature">
+      <div class="icon">💰</div>
+      <p>Significant Cost Savings</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🛡️</div>
+      <p>Backed by Federal Benefits</p>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p>Check your service area: Clarksburg, Urbana, Frederick, Gaithersburg, Rockville, Olney, Silver Spring</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <p>Submit your info & preferred pickup time</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <p>Receive confirmation and start commuting</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients">
+    <h2>Trusted By</h2>
+    <div class="client-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Food_and_Drug_Administration_logo.svg/2560px-Food_and_Drug_Administration_logo.svg.png" alt="FDA">
+      <img src="https://www.commerce.gov/themes/custom/commerce/assets/images/usdc-logo-2x.png" alt="DOC">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Seal_of_the_United_States_Census_Bureau.svg" alt="Census">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Seal_of_the_United_States_Bureau_of_Labor_Statistics.svg" alt="BLS">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/NOAA_logo.svg/2560px-NOAA_logo.svg.png" alt="NOAA">
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Riders Say</h2>
+    <div class="testimonial">
+      "I save so much each month and have a relaxing ride every morning!"<br>
+      <div class="testimonial-author">— Mark, FDA Employee</div>
+    </div>
+    <div class="testimonial">
+      "Safe, punctual, and comfortable. Couldn't ask for better."
+      <div class="testimonial-author">— Alicia, NOAA Staff</div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Suitland Vanpool. All rights reserved. | Contact: info@suitlandvanpool.com
+  </footer>
+</body>
+</html>
+
